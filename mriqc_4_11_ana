@@ -1,0 +1,23 @@
+docker run -ti --rm   \
+     -v /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Data:/data:ro  \
+     -v /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Data_output:/out  \
+       poldracklab/mriqc:latest   \
+     /data /out participant   \
+     --participant_label 8410   \
+     --no-sub      \
+     --email yun.wang@nyspi.columbia.edu
+
+
+
+docker run -ti --rm   \
+     -v /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Data:/bids_dataset:ro    \
+     -v /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Data_output:/outputs   \
+     -v /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Test_pipeline/freesurfer_license.txt:/license.txt  \
+     poldracklab/fmriprep:latest     \
+     /bids_dataset /outputs participant --participant_label 8410  \
+     --fs-license-file "/license.txt"    \
+     --fs-no-reconall   \
+     --ignore fieldmaps slicetiming   \
+     --anat-only\
+     --write-graph  \
+     --stop-on-first-crash

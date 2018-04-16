@@ -1,0 +1,13 @@
+
+# Transfer the image to c2b2
+scp /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Docker_HPC/poldracklab_fmriprep_latest-*.img yw3044@login.c2b2.columbia.edu:/ifs/home/msph/epi/yw3044/data/ITA
+
+
+#my login information and transfer the data to server
+ssh -X yw3044@login.c2b2.columbia.edu
+
+#this is your main folder
+/ifs/home/msph/epi/yw3044
+
+#ITA data folder
+rsync -ahze ssh yw3044@login.c2b2.columbia.edu:/ifs/home/msph/epi/yw3044/data/ITA

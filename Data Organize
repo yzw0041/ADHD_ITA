@@ -1,0 +1,8 @@
+% ITA data Organization
+
+cd /Volumes/Gradient/MRI_data/ITA 
+find . -name  *.tar.gz -exec rsync -rR {} /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Raw/ \;
+
+
+% This is not the complete MRI data. you need to update later.
+% use DataGrabber to grab anatomical and functional data automatically.
