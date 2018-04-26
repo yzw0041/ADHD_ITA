@@ -1,13 +1,29 @@
 
 # Transfer the image to c2b2
-scp /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Docker_HPC/poldracklab_fmriprep_latest-*.img yw3044@login.c2b2.columbia.edu:/ifs/home/msph/epi/yw3044/data/ITA
+scp /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Docker_HPC/poldracklab_fmriprep_latest-*.img yw3044@login.c2b2.columbia.edu:/ifs/scratch/msph/epi/yw3044/ITA
+scp /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Docker_HPC/poldracklab_fmriprep_latest-*.img jep2111@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/yun
+scp /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Sample jep2111@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/yun
 
 
 #my login information and transfer the data to server
+ssh -X jep2111@login.c2b2.columbia.edu
+
 ssh -X yw3044@login.c2b2.columbia.edu
 
 #this is your main folder
 /ifs/home/msph/epi/yw3044
 
+#this is your data folder
+
+/ifs/scratch/msph/epi/yw3044
+
+
 #ITA data folder
-rsync -ahze ssh yw3044@login.c2b2.columbia.edu:/ifs/home/msph/epi/yw3044/data/ITA
+rsync -ahze ssh /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Preprocess/singularity  jep2111@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/yun
+rsync -ahze ssh /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Sample    jep2111@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/yun
+
+
+singularity run /ifs/scratch/pimri/posnerlab/yun/poldracklab_fmriprep_latest-2018-04-11-b46f8842831b.img \
+    /ifs/scratch/pimri/posnerlab/yun/Sample/Preprocess  /ifs/scratch/pimri/posnerlab/yun/Sample/fmriprep_outputs \
+    participant \
+    --participant-label 9246

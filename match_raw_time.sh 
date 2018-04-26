@@ -1,0 +1,39 @@
+#!/bin/bash
+
+cd /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Preprocess
+path=/Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Preprocess
+des=/Volumes/Pegasus_wangyun/ADHD/ITA/MRI
+k=1
+  cat "pre.txt" | while read C; do
+        cd $path
+        num=$(printf %02d $k)
+        echo $num
+        rsync -rR ./sub-$C  $des/prep_time_match
+        cd $des/prep_time_match/sub-$C
+        find .  -type f -mindepth 2 -exec rename 's/'$C'/'${num}_ses-predrug'/' {} \;
+        mkdir ses-predrug
+        mv  ./func ./ses-predrug
+        mv  ./anat ./ses-predrug
+        cd ..
+        mv ./sub-$C ./sub-$num
+        let k=k+1
+
+  done
+
+
+k=1
+  cat "post.txt" | while read C; do
+        cd $path
+        num=$(printf %02d $k)
+        echo $num
+        rsync -rR ./sub-$C  $des/prep_time_match
+        cd $des/prep_time_match/sub-$C
+        find .  -type f -mindepth 2 -exec rename 's/'$C'/'${num}_ses-postdrug'/' {} \;
+        mkdir ../sub-$num/ses-postdrug
+        mv  ./func ../sub-$num/ses-postdrug
+        mv  ./anat ../sub-$num/ses-postdrug
+        cd ..
+        rm ./sub-$C
+        let k=k+1
+
+  done
