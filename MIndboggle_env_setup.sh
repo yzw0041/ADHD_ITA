@@ -2,7 +2,7 @@
 
 cd /home/wangyun/ITA
 cat /home/wangyun/ADHD_ITA/ana_test.txt | while read C; do
-          ID=`$C | cut -d'/' -f4`
+          ID=`echo $C | cut -d'/' -f3`
 
           #mindboggle enviromental setup
           HOST=/home/wangyun/ITA  # path on host to access input/output
@@ -16,7 +16,7 @@ cat /home/wangyun/ADHD_ITA/ana_test.txt | while read C; do
             -B $HOST:$DOCK:ro \
             -B $PWD:$DOCK \
             -B $PWD/jovyan:/home/jovyan \
-            -e mindboggle.img \
+            -e $HOST/mindboggle.img \
             $DOCK/$C  \
             --id $ID \
             --plugin MultiProc --plugin_args "dict(n_procs=2)" \
