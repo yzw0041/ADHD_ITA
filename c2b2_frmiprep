@@ -20,10 +20,10 @@ ssh -X yw3044@login.c2b2.columbia.edu
 
 #ITA data folder
 rsync -ahze ssh /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Preprocess/singularity  jep2111@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/yun
-rsync -ahze ssh /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Sample    jep2111@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/yun
+rsync -ahze ssh /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/Preprocess    yw3044@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/yw3044/data/ITA
 
 
-singularity run /ifs/scratch/pimri/posnerlab/yun/poldracklab_fmriprep_latest-2018-04-11-b46f8842831b.img \
-    /ifs/scratch/pimri/posnerlab/yun/Sample/Preprocess  /ifs/scratch/pimri/posnerlab/yun/Sample/fmriprep_outputs \
+singularity run /ifs/scratch/pimri/posnerlab/yw3044/data/ITA/poldracklab_fmriprep_latest-2018-04-11-b46f8842831b.img \
+    /ifs/scratch/pimri/posnerlab/yw3044/data/ITA/prep_time_match_original  /ifs/scratch/pimri/posnerlab/yun/Sample/fmriprep_outputs/ \
     participant \
     --participant-label 9246
