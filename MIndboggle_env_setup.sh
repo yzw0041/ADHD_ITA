@@ -10,7 +10,7 @@ cat /home/wangyun/ADHD_ITA/ana_test.txt | while read C; do
           IMAGE=$DOCK/$C  # input image on HOST
           #ID=arno  # ID for brain image
           EXAMPLE=$DOCK/mindboggle_input_example
-          FREESURFER_SUBJECT=$EXAMPLE/freesurfer/subjects/$ID
+          #FREESURFER_SUBJECT=$EXAMPLE/freesurfer/subjects/$ID
           #Out=mindboggle
           singularity run \
             -B $HOST:$DOCK:ro \
