@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /home/wangyun/ITA
-cat /home/wangyun/ITA/Preprocess/ana_test.txt | while read C; do
+cat /home/wangyun/ADHD_ITA/ana_test.txt | while read C; do
           ID=`$C | cut -d'/' -f4`
 
           #mindboggle enviromental setup

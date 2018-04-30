@@ -1,0 +1,4 @@
+../Preprocess//sub-10002/anat/sub-10002_run-01_T1w.nii.gz
+../Preprocess//sub-10033/anat/sub-10033_run-01_T1w.nii.gz
+../Preprocess//sub-10046/anat/sub-10046_run-01_T1w.nii.gz
+../Preprocess//sub-10050/anat/sub-10050_run-01_T1w.nii.gz
