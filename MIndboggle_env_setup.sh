@@ -7,7 +7,7 @@ cat /home/wangyun/ADHD_ITA/ana_test.txt | while read C; do
           #mindboggle enviromental setup
           HOST=/home/wangyun/ITA  # path on host to access input/output
           DOCK=/home/jovyan/work  # path to HOST from Docker container
-          IMAGE=$DOCK/$C  # input image on HOST
+          IMAGE=$HOST/$C  # input image on HOST
           #ID=arno  # ID for brain image
           EXAMPLE=$DOCK/mindboggle_input_example
           #FREESURFER_SUBJECT=$EXAMPLE/freesurfer/subjects/$ID
@@ -17,7 +17,7 @@ cat /home/wangyun/ADHD_ITA/ana_test.txt | while read C; do
             -B $PWD:$DOCK \
             -B $PWD/jovyan:/home/jovyan \
             -e $HOST/mindboggle.img \
-            $DOCK/$C  \
+              $C  \
             --id $ID \
             --plugin MultiProc --plugin_args "dict(n_procs=2)" \
             --fs_openmp 5 --ants_num_threads 5 --mb_num_threads 10
