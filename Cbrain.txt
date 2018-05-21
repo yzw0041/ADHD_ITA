@@ -1,0 +1,6 @@
+sftp -o port=7500 yunwang@ace-cbrain-1.cbrain.mcgill.ca
+put *
+lls
+ls
+
+get /.tar.gz
