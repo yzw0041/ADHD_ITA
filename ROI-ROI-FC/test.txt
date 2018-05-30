@@ -1,0 +1,144 @@
+8            SSM
+236    Uncertain
+Name: Network Abbrev, dtype: object
+8         Precentral_R (aal)
+236    Occipital_Inf_L (aal)
+Name: ROI, dtype: object
+15    SSM
+27    SSM
+Name: Network Abbrev, dtype: object
+15                  undefined
+27    Supp_Motor_Area_R (aal)
+Name: ROI, dtype: object
+43        COTC
+61    Auditory
+Name: Network Abbrev, dtype: object
+43    Rolandic_Oper_L (aal)
+61                undefined
+Name: ROI, dtype: object
+46    COTC
+24     SSM
+Name: Network Abbrev, dtype: object
+46    Temporal_Pole_Sup_L (aal)
+24                    undefined
+Name: ROI, dtype: object
+59    Auditory
+82         DMN
+Name: Network Abbrev, dtype: object
+59    Rolandic_Oper_R (aal)
+82          Angular_R (aal)
+Name: ROI, dtype: object
+76          DMN
+193    Salience
+Name: Network Abbrev, dtype: object
+76        Precuneus_L (aal)
+193    Cingulum_Ant_L (aal)
+Name: ROI, dtype: object
+87         DMN
+50    Auditory
+Name: Network Abbrev, dtype: object
+87     Frontal_Sup_R (aal)
+50    Temporal_Sup_R (aal)
+Name: ROI, dtype: object
+90    DMN
+99    DMN
+Name: Network Abbrev, dtype: object
+90     Frontal_Sup_L (aal)
+99    Cingulum_Ant_L (aal)
+Name: ROI, dtype: object
+106    DMN
+16     SSM
+Name: Network Abbrev, dtype: object
+106    Temporal_Mid_L (aal)
+16       Precentral_R (aal)
+Name: ROI, dtype: object
+107    DMN
+224     DA
+Name: Network Abbrev, dtype: object
+107    Frontal_Sup_Medial_R (aal)
+224          Temporal_Mid_R (aal)
+Name: ROI, dtype: object
+116    DMN
+31     SSM
+Name: Network Abbrev, dtype: object
+116    Angular_R (aal)
+31      Insula_R (aal)
+Name: ROI, dtype: object
+122     MR
+119    DMN
+Name: Network Abbrev, dtype: object
+122          Precuneus_R (aal)
+119    Frontal_Inf_Orb_R (aal)
+Name: ROI, dtype: object
+129    Visual
+227        DA
+Name: Network Abbrev, dtype: object
+129    Occipital_Mid_L (aal)
+227    Occipital_Mid_L (aal)
+Name: ROI, dtype: object
+130       Visual
+240    Uncertain
+Name: Network Abbrev, dtype: object
+130    Lingual_R (aal)
+240     Rectus_R (aal)
+Name: ROI, dtype: object
+131    Visual
+231        DA
+Name: Network Abbrev, dtype: object
+131    Occipital_Mid_L (aal)
+231       Precentral_R (aal)
+Name: ROI, dtype: object
+133    Visual
+111       DMN
+Name: Network Abbrev, dtype: object
+133     Lingual_L (aal)
+111    Fusiform_R (aal)
+Name: ROI, dtype: object
+135       Visual
+261    Uncertain
+Name: Network Abbrev, dtype: object
+135    Occipital_Inf_R (aal)
+261     Temporal_Inf_L (aal)
+Name: ROI, dtype: object
+142    Visual
+177      FPTC
+Name: Network Abbrev, dtype: object
+142    Lingual_L (aal)
+177    Angular_R (aal)
+Name: ROI, dtype: object
+151    Visual
+92        DMN
+Name: Network Abbrev, dtype: object
+151         Occipital_Mid_R (aal)
+92     Frontal_Sup_Medial_R (aal)
+Name: ROI, dtype: object
+160    FPTC
+216      VA
+Name: Network Abbrev, dtype: object
+160     Frontal_Mid_L (aal)
+216    Temporal_Sup_R (aal)
+Name: ROI, dtype: object
+179    FPTC
+2       SSM
+Name: Network Abbrev, dtype: object
+179    Frontal_Inf_Tri_L (aal)
+2      Supp_Motor_Area_L (aal)
+Name: ROI, dtype: object
+181    Salience
+9           SSM
+Name: Network Abbrev, dtype: object
+181    Cingulum_Mid_R (aal)
+9         Precuneus_R (aal)
+Name: ROI, dtype: object
+205    SubC
+202    SubC
+Name: Network Abbrev, dtype: object
+205           undefined
+202    Thalamus_R (aal)
+Name: ROI, dtype: object
+210    SubC
+66      DMN
+Name: Network Abbrev, dtype: object
+210                  undefined
+66     Frontal_Sup_Orb_L (aal)
+Name: ROI, dtype: object

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+cat "subject.txt" | while read C; do
+
+   rsync -ahze ssh yw3044@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/acc2211/ITA/preproc_ITA/data/$C   /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/DTI/Alex
+done
