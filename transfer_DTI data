@@ -5,3 +5,9 @@ cat "subject.txt" | while read C; do
 
    rsync -ahze ssh yw3044@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/acc2211/ITA/preproc_ITA/data/$C   /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/DTI/Alex
 done
+find ./*/*MD.mif.gz -exec rsync -rR  {}  /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/DTI/Alex \;
+find ./*/*FA.mif.gz -exec rsync -rR  {}  /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/DTI/Alex \;
+find ./*/*Affine.txt -exec rsync -rR  {}  /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/DTI/Alex \;
+find ./*/*InverseWarp.nii.gz -exec rsync -rR  {}  /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/DTI/Alex \;
+find ./*/*brain.nii.gz -exec rsync -rR  {}  /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/DTI/Alex \;
+find ./*/aparc*.nii.gz -exec rsync -rR  {}  /Volumes/Pegasus_wangyun/ADHD/ITA/MRI/DTI/Alex \;

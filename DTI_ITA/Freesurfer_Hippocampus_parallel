@@ -1,0 +1,1 @@
+ls Subject*.nii.gz | sed 's/.nii.gz//' | parallel --jobs 12 recon-all -s {} -i {}.nii.gz -all -qcache
